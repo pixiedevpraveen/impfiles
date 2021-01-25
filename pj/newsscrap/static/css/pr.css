@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 /* stylelint-disable selector-list-comma-newline-after */
 body{
   background-color:  #0278c20f;
@@ -110,8 +111,8 @@ h1, h2, h3, h4, h5, h6 {
 /* custom css start here*/
 .navbar-brand
 {
-	font-size: 2.25rem;
-	margin-left: 1.5%;
+  font-size: 2.25rem;
+  margin-left: 1.5%;
 }
 .navbar
       {
@@ -122,12 +123,12 @@ h1, h2, h3, h4, h5, h6 {
       }
 .navbar-collapse
 {
-	padding-left: 1rem;
-	padding-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-.form-inline
+/* .form-inline
 {
-}
+} */
 
 /*Index.html css start here*/
  .carousel-item .carousel-caption
@@ -323,5 +324,166 @@ h1, h2, h3, h4, h5, h6 {
   width: 70%;
 }*/
 
+/* transparent card Effect */
+.StarPr {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+.BodyPr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #161623;
+}
+.BodyPr::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(30% at right 70%);
+}
+.BodyPr::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 10% 10%);
+}
+.trBodyContainerPr {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.trBodyContainerPr .trBodyPr {
+    position: relative;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.trCardContainerPr {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 1500px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.trCardContainerPr .trCardPr {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.trCardContainerPr .trCardBigPr {
+    position: relative;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+  }
+  .trCardContainerPr .trCardBigContentPr {
+    padding: 30px;
+  }
 
+.trCardContainerPr .trCardPr .trCardContentPr {
+    padding: 20px;
+    opacity: 1;
+    transition: 0.5ms;
+}
+.trCardContainerPr .trCardPr:hover .trCardContentPr {
+    opacity: 1;
+}
+.trCardContainerPr .trCardPr .trCardContentPr h2 {
+    position: absolute;
+    top: -25px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.05);
+}
+.trCardContainerPr .trCardBigPr .trCardContentPr .authorPr {
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    font-size: 4.5em;
+    color: rgba(255, 255, 255, 0.05);
+}
+.trCardContainerPr .trCardPr .trCardContentPr h3 {
+    font-size: 1.8em;
+    color: white;
+    z-index: 1;
+}
+.trCardContainerPr .trCardPr .trCardContentPr p {
+    font-size: 1em;
+    color: white;
+    font-weight: 300;    
+}
+.trCardContainerPr .trCardPr .trCardContentPr a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.trCardContainerPr .trCardBigPr .trCardContentPr h3 {
+    font-size: 1.8em;
+    color: white;
+    z-index: 1;
+}
+.trCardContainerPr .trCardBigPr .trCardContentPr p {
+    font-size: 1em;
+    color: white;
+    font-weight: 300;    
+}
+.trCardContainerPr .trCardBigPr .trCardContentPr a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
